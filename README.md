@@ -1,20 +1,20 @@
 # ARCANE: Attribute-based Realistic Community and Associate NEtwork algorithm
 
-An Object-Oriented Algorithm in _Python_ for "Generating Complex Social Networks with Node Attributes" and Communities
+An Object-Oriented Algorithm in _Python_ for our article "From attributes to communities: A novel approach in social network generation".
 
 ## Citation:
 
 If you use ARCANE in your research studies, please cite:
 
-> Muhtar Çağkan Uludağlı and Kaya Oğuz. 2023. Generating Complex Social Networks with Node Attributes.
+> Muhtar Çağkan Uludağlı and Kaya Oğuz. 2024. From attributes to communities: A novel approach in social network generation.
 
 As ''bibtex'' citation:
 
-> @article{uludagli2023generating,  
+> @article{uludagli2024from,  
 >   author = {Uludağlı, Muhtar Çağkan and Oğuz, Kaya},  
->   title = {{Generating Complex Social Networks with Node Attributes}},  
+>   title = {{From attributes to communities: A novel approach in social network generation}},  
 >   journal = {},  
->   year = {2023}  
+>   year = {2024}  
 > }
 
 
