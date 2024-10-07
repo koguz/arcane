@@ -14,7 +14,7 @@ As ''bibtex'' citation:
 >   author = {Uludağlı, Muhtar Çağkan and Oğuz, Kaya},  
 >   title = {{From attributes to communities: A novel approach in social network generation}},  
 >   journal = {PeerJ Computer Science},  
->   year = {2024}
+>   year = {2024},  
 >   issue = {} 
 > }
 
