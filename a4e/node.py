@@ -1,7 +1,7 @@
 import json
 import math
 
-from anatolia.node_attribute import NodeAttribute
+from a4e.node_attribute import NodeAttribute
 
 
 class Node:

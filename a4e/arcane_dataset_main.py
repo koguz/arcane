@@ -4,9 +4,9 @@ import pickle
 
 import networkx as nx
 
-from anatolia.network import Graph
-from anatolia.a6a import AnatoliA
-from anatolia.grid import Grid
+from a4e.network import Graph
+from a4e.arcane import Arcane
+from a4e.grid import Grid
 import os.path
 from PIL import Image
 
@@ -106,22 +106,22 @@ if __name__ == '__main__':
                 method_start_time = datetime.now()
 
                 parameters = []
-                anatolia = AnatoliA()
+                arcane_ = Arcane()
                 x = int(input("Give (2 power of x) value for creating the grid size of (2^x)+1: \n"))
                 parameters.append(x)
                 roughness = float(
-                    input("Give roughness value for grid creation (Bigger value gives more steepness): \n"))
+                    input("Give roughness value for grid creation (Bigger value gives more steepness) (float, 0.0-1.0): \n"))
                 parameters.append(roughness)
                 grid = Grid(x, roughness)  # (3, 0.4)
                 parameters.append(grid.place_threshold)
                 # grid.print_grid()
                 print("You can place ", grid.placeable_node_size, " nodes into grid.")
                 vertex_count = grid.placeable_node_size
-                metacomm_count = int(input("Please enter the meta-community count (int): \n"))
-                parameters.append(metacomm_count)
-                # comm_list = anatolia.generate_meta_communities(metacomm_count)
-                comm_list = anatolia.generate_general_attributes(metacomm_count)
-                node_list = anatolia.generate_vertices(vertex_count, comm_list, grid.placeable_grid_positions)
+                attribute_count = int(input("Please enter the general attribute count (int): \n"))
+                parameters.append(attribute_count)
+                # comm_list = a4e.generate_meta_communities(attribute_count)
+                comm_list = arcane_.generate_general_attributes(attribute_count)
+                node_list = arcane_.generate_vertices(vertex_count, comm_list, grid.placeable_grid_positions)
                 # ? Use node list to create community_vertices dictionary
                 community_nodes_dict = dict.fromkeys(comm_list)
                 for node in node_list:
@@ -133,16 +133,16 @@ if __name__ == '__main__':
                                 community_nodes_dict[key] = [node]
                 print(len(community_nodes_dict))
                 # ? Create pairwise distance dictionary between all vertices of the graph
-                distances_dict = anatolia.calculate_distances(node_list)
+                distances_dict = arcane_.calculate_distances(node_list)
                 # ? (Interval of distances dict) between vertices if needed (uncomment if needed)
-                # interval_dict = anatolia.create_interval_dict(distances_dict)
+                # interval_dict = a4e.create_interval_dict(distances_dict)
                 # ? Generate edges by using both the coordinate distances and attribute similarity
                 similarity_threshold = int(input("Please give similarity threshold: (int) "
                                                  "\n (This value is actually the count of mutual attributes needed "
                                                  "for forming an edge between the nodes.) \n"))
                 parameters.append(similarity_threshold)
-                edges_dict, revised_node_list = anatolia.generate_edges_with_similar_distance(node_list, distances_dict,
-                                                                                              similarity_threshold)
+                edges_dict, revised_node_list = arcane_.generate_edges_with_similar_distance(node_list, distances_dict,
+                                                                                             similarity_threshold)
                 nx_id_graph = nx.from_dict_of_lists(edges_dict)
                 nx_connected = nx.connected_components(nx_id_graph)
                 connected_components = [co for co in sorted(nx_connected, key=len, reverse=True) if len(co) > 2]

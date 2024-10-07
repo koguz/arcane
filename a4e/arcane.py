@@ -3,10 +3,10 @@ import random
 import string
 from scipy.spatial import distance
 
-from anatolia.grid import Grid
-from anatolia.network import Graph
-from anatolia.node import Node
-from anatolia.node_attribute import NodeAttribute
+from a4e.grid import Grid
+from a4e.network import Graph
+from a4e.node import Node
+from a4e.node_attribute import NodeAttribute
 
 
 # ! UNUSED: The method body is added into generate_vertices method
@@ -183,7 +183,7 @@ def get_distance(first_node: Node, second_node: Node):
 
 # ? Creating a random graph for testing purposes
 def create_random_graph(size: int, community_size: int):
-    c = AnatoliA()
+    c = Arcane()
     vertex_list = []
     tuple_list = []
     attributes = c.generate_general_attributes(community_size)
@@ -247,7 +247,7 @@ def create_random_graph(size: int, community_size: int):
 # ? Creating a random graph on a grid
 # TODO: Add attribute affinity levels
 def create_random_grid_graph(exponent: int, roughness: float, community_size: int):
-    c = AnatoliA()
+    c = Arcane()
     g = Grid(exponent, roughness)
     print(list(g.grid_pos_list))
     print(list(g.placeable_grid_positions))
@@ -299,7 +299,7 @@ def affinity_level_comparator(_selected_node: Node, _node_to_compare: Node,
         return False
 
 
-class AnatoliA:
+class Arcane:
 
     # ! UNUSED: We only create an instance to use the methods
     # TODO: Maybe all methods can be transformed to static methods

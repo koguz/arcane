@@ -5,7 +5,7 @@ from datetime import datetime
 
 import numpy as np
 
-from anatolia.node import Node
+from a4e.node import Node
 
 import networkx as nx
 import matplotlib.pyplot as plt
@@ -14,7 +14,7 @@ import matplotlib.patches as mpatches
 import random
 from scipy.spatial import distance
 
-from anatolia.node_attribute import NodeAttribute
+from a4e.node_attribute import NodeAttribute
 
 
 def hex_to_rgb(value):
