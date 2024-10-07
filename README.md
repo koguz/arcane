@@ -6,7 +6,7 @@ An Object-Oriented Algorithm in _Python_ for our article "From attributes to com
 
 If you use ARCANE in your research studies, please cite:
 
-> Muhtar Çağkan Uludağlı and Kaya Oğuz. 2024. From attributes to communities: A novel approach in social network generation. _PeerJ Computer Science_ xx:eXXXX. https://doi.org/abcd
+> Uludağlı MÇ, Oğuz K. 2024. From attributes to communities: A novel approach in social network generation. _PeerJ Computer Science_ xx:eXXXX. https://doi.org/abcd
 
 As ''bibtex'' citation:
 
@@ -20,6 +20,7 @@ As ''bibtex'' citation:
 
 
 ## How to Use ARCANE:
+
 We have 5 different classes to use in 5 different source code files:
 ```python
 Grid()              # in grid.py, 
