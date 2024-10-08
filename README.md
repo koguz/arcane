@@ -96,3 +96,6 @@ new_graph.create_communities("a_string_name_for_graph_drawing.png")
 All the essential things we have given in here is employed in our __"arcane_dataset_main.py"__ source code file 
 in an ordered fashion. All the needed parameters, creating new instances, generating and drawing the resulting graphs, 
 naming these graphs and saving them as .pickle files to use them afterward are managed with the text prompts from our test code.
+
+### External Dataset Used for Evaluations
+We used Sinanet dataset from https://github.com/smileyan448/Sinanet of the article "Jia, C., Li, Y., Carson, M. B., Wang, X., & Yu, J. (2017). Node attribute-enhanced community detection in complex networks. Scientific reports, 7(1), 2626.". If you also use this dataset, please cite it accordingly.
