@@ -6,17 +6,23 @@ An Object-Oriented Algorithm in _Python_ for our article "From attributes to com
 
 If you use ARCANE in your research studies, please cite:
 
-> Uludağlı MÇ, Oğuz K. 2024. From attributes to communities: A novel approach in social network generation. _PeerJ Computer Science_ xx:eXXXX. https://doi.org/abcd
+> Uludağlı MC, Oğuz K. 2024. From attributes to communities: a novel approach in social network generation. _PeerJ Comput. Sci._ 10:e2483 http://doi.org/10.7717/peerj-cs.2483
 
 As ''bibtex'' citation:
 
-> @article{uludagli2024arcane,  
->   author = {Uludağlı, Muhtar Çağkan and Oğuz, Kaya},  
->   title = {{From attributes to communities: A novel approach in social network generation}},  
->   journal = {PeerJ Computer Science},  
->   year = {2024},  
->   issue = {} 
-> }
+> @article{10.7717/peerj-cs.2483,  
+> title = {From attributes to communities: a novel approach in social network generation},  
+> author = {Uludağlı, Muhtar Çağkan and Oğuz, Kaya},  
+> year = 2024,  
+> month = nov,  
+> keywords = {Graph generation, Node attributes, Social networks, Community},  
+> volume = 10,  
+> pages = {e2483},  
+> journal = {PeerJ Computer Science},  
+> issn = {2376-5992},  
+> url = {https://doi.org/10.7717/peerj-cs.2483},  
+> doi = {10.7717/peerj-cs.2483},  
+> }  
 
 
 ## How to Use ARCANE:
